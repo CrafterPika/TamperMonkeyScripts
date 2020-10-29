@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Token-Auth
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  try to take over the world!
 // @author       CrafterPika & DwifteJB
-// @match        http*://discord.com/login*
+// @match        http*://*.discord.com/login*
 // @grant        none
+// @updateURL    https://github.com/CrafterPika/TamperMonkeyScripts/raw/main/Discord/Token-Auth.user.js
 // ==/UserScript==
 
 (function() {
