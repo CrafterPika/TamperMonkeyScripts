@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Token-Auth
-// @namespace    http://tampermonkey.net/
-// @version      0.2
+// @namespace    http://www2.dlpika.ml/
+// @version      0.3
 // @description  try to take over the world!
 // @author       CrafterPika & DwifteJB
 // @match        http*://*.discord.com/login*
