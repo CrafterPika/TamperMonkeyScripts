@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Token-Auth
 // @namespace    http://www2.dlpika.ml/
-// @version      0.3
-// @description  try to take over the world!
+// @version      0.4
+// @description  Adds an Token login option to Discords web login page ;)
 // @author       CrafterPika & DwifteJB
 // @match        http*://*.discord.com/login*
 // @grant        none
