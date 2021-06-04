@@ -12,11 +12,20 @@ const meta = {
 // Declare Plugin
 window['start_' + meta.id] = function(){
     if (window.location.href == "https://starfiles.co/settings") {
-        eval('function yeetPlugins(){confirm("Are you sure to continue, this will disable all plugins you installed")?(localStorage.removeItem("plugins"),alert("Removed all Plugins")):alert("cancelled action")}')
-        var htmltext = '<button class="btn btn-small" onclick="yeetPlugins();">Remove All Plugins</button><br><br>';
+        var htmltext = '<button class="btn btn-small" id="removePlugins">Remove All Plugins</button><br><br>';
         var x = document.getElementsByClassName('pagecard object'); 
         x[0].innerHTML = htmltext + x[0].innerHTML;
     }
+    
+    document.getElementById("removePlugins").addEventListener("click", function(){
+        if (confirm('Are you sure to continue, this will disable all plugins you installed')) { 
+            // DO IT!
+            localStorage.removeItem("plugins");
+            alert("Removed all Plugins")
+        } else {
+            alert('cancelled action')
+        }
+    });
 }
 // Run Plugin
 init_plugin(meta);
