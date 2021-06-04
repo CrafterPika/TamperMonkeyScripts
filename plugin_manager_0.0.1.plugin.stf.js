@@ -11,15 +11,9 @@ const meta = {
 }
 // Declare Plugin
 window['start_' + meta.id] = function(){
-    function yeetPlugins() {
-        if (confirm('Are you sure to continue, this will disable all plugins you installed')) {
-            // DO IT!
-            localStorage.removeItem("plugins");
-            alert("Removed all Plugins")
-          } else {
-            alert('cancelled action')
-          }
-    }
+    var script = '<script>function yeetPlugins(){confirm("Are you sure to continue, this will disable all plugins you installed")?(localStorage.removeItem("plugins"),alert("Removed all Plugins")):alert("cancelled action")}</script>';
+    var headtag = document.getElementsByTagName('head');
+    headtag[0].innerHTML = script + headtag[0].innerHTML;
     if (window.location.href == "https://starfiles.co/settings") {
         var htmltext = '<button class="btn btn-small" onclick="yeetPlugins()">Remove All Plugins</button><br><br>';
         var x = document.getElementsByClassName('pagecard object'); 
